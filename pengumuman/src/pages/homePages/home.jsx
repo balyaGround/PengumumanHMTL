@@ -25,7 +25,7 @@ function Home() {
               <div className="col">
                 <form>
                   <div className="mb-3 text-center ">
-                    <label for="exampleInputEmail1" className="form-label">
+                    <label for="exampleInputEmail1" className="form-label mt-3">
                       Enter Your NIM
                     </label>
                     <input className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="200407002" style={{ width: "10rem" }} />
