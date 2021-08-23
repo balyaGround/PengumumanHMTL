@@ -7,10 +7,10 @@ import axios from "axios";
 function Home() {
   const [data, setData] = useState([]);
   const [id, setId] = useState([]);
-
+  const awal = [];
   const getData = async () => {
     await axios
-      .get("https://localhost:8000")
+      .get("https://datapengumuman.herokuapp.com/data")
       .then((result) => setData(result.data))
       .catch((err) => console.log(err));
   };

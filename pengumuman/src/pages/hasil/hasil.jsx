@@ -8,7 +8,7 @@ function Hasil() {
   const [lulus, setLulus] = useState([]);
   const getData = async () => {
     await axios
-      .get(`https://loacalhost:8000/${id}`)
+      .get(`https://datapengumuman.herokuapp.com/data/${id}`)
       .then((result) => setLulus(result.data))
       .catch((err) => console.log(err));
   };
