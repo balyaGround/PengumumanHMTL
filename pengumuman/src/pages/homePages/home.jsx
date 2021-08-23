@@ -5,36 +5,36 @@ import "./home.css";
 function Home() {
   return (
     <>
-      <main class=" container-fluid">
-        <div class=" container gelas">
-          <div class="container Header text-center ">
-            <div class="row">
-              <div class="col">
+      <main className=" container-fluid">
+        <div className=" container gelas">
+          <div className="container Header text-center ">
+            <div className="row">
+              <div className="col">
                 <img src={USU} alt="" />
                 <img src={logo} alt="" />
               </div>
             </div>
-            <div class="row">
-              <div class="col">
+            <div className="row">
+              <div className="col">
                 <p>Pengumuman Kelulusan Anggota Muda HMTL FT USU 2021</p>
               </div>
             </div>
           </div>
-          <div class="container Input">
-            <div class="row">
-              <div class="col">
+          <div className="container Input">
+            <div className="row">
+              <div className="col">
                 <form>
-                  <div class="mb-3 text-center ">
-                    <label for="exampleInputEmail1" class="form-label">
+                  <div className="mb-3 text-center ">
+                    <label for="exampleInputEmail1" className="form-label">
                       Enter Your NIM
                     </label>
-                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="200407002" style={{ width: "10rem" }} />
-                    <div id="emailHelp" class="form-text text-center">
+                    <input className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="200407002" style={{ width: "10rem" }} />
+                    <div id="emailHelp" className="form-text text-center">
                       Before you click Checkout please pray for a minute goodluck !!
                     </div>
                   </div>
                   <Link to="/Hasil">
-                    <button type="submit" class="btn btn-info ">
+                    <button type="submit" className="btn btn-info ">
                       Checkout!!
                     </button>
                   </Link>
