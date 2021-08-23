@@ -74,3 +74,8 @@ main {
     font-size: small;
   }
 }
+@media (min-width: 426px) {
+  img {
+    margin-left: 3rem;
+  }
+}

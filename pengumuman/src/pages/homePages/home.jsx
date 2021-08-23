@@ -1,14 +1,16 @@
 import logo from "../../img/logo.jpeg";
 import { Link } from "react-router-dom";
+import USU from "../../img/usu.jpeg";
 import "./home.css";
 function Home() {
   return (
     <>
       <main class=" container-fluid">
         <div class=" container gelas">
-          <div class="container Header text-center">
+          <div class="container Header text-center ">
             <div class="row">
               <div class="col">
+                <img src={USU} alt="" />
                 <img src={logo} alt="" />
               </div>
             </div>
