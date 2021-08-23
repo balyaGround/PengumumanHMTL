@@ -13,7 +13,7 @@ function Router() {
         <Route exact path="/hasil/:id">
           <Hasil />
         </Route>
-        <Route path="*">
+        <Route exact path="*">
           <div>
             <h1>PAGE NOT FOUND</h1>
           </div>

@@ -3,6 +3,7 @@ import logo from "../../img/logo.jpeg";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 function Hasil() {
   const { id } = useParams();
   const [lulus, setLulus] = useState([]);
@@ -32,10 +33,17 @@ function Hasil() {
               </div>
             </div>
           </div>
-          <div className="container Input">
+          <div className="container Input mt-5">
             <div className="row">
-              <div className="col">
-                <h1>Selamat {lulus.nama} Anda Lulus sebagai anggota muda HMTL FT USU 2021!!!</h1>
+              <div className="col text-center mt-3">
+                <h1>
+                  peserta atas nama {lulus.nama} {lulus.keterangan}
+                </h1>
+                <Link to={`/`}>
+                  <button type="submit" className="btn btn-secondary ms-2 ">
+                    Check teman2 lain?
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
