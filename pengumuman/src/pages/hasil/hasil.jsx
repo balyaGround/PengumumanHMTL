@@ -1,21 +1,21 @@
 import "./hasil.css";
 import logo from "../../img/logo.jpeg";
-import { useEffect, useState, useParams } from "react";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import axios from "axios";
 function Hasil() {
   const { id } = useParams();
-  const [lulus, setLulus] = useState({});
-  const getHasil = async () => {
+  const [lulus, setLulus] = useState([]);
+  const getData = async () => {
     await axios
-      .get(`https://3006/data/${id}`)
+      .get(`https://loacalhost:8000/${id}`)
       .then((result) => setLulus(result.data))
       .catch((err) => console.log(err));
   };
-
   useEffect(() => {
-    getHasil(id);
+    getData(id);
   }, [id]);
-  console.log(lulus);
+  console.log("data id ", lulus);
   return (
     <>
       <main className=" container-fluid">
@@ -35,7 +35,7 @@ function Hasil() {
           <div className="container Input">
             <div className="row">
               <div className="col">
-                <h1>Selamat Anda Lulus !!!</h1>
+                <h1>Selamat {lulus.nama} Anda Lulus sebagai anggota muda HMTL FT USU 2021!!!</h1>
               </div>
             </div>
           </div>

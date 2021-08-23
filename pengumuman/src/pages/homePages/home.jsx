@@ -6,10 +6,11 @@ import "./home.css";
 import axios from "axios";
 function Home() {
   const [data, setData] = useState([]);
+  const [id, setId] = useState([]);
 
   const getData = async () => {
     await axios
-      .get("http://localhost:3006/data")
+      .get("https://localhost:8000")
       .then((result) => setData(result.data))
       .catch((err) => console.log(err));
   };
@@ -18,7 +19,7 @@ function Home() {
     // didMount
     getData();
   }, []);
-  console.log(data);
+  console.log("data", data);
   return (
     <>
       <main className=" container-fluid">
@@ -44,12 +45,23 @@ function Home() {
                     <label for="exampleInputEmail1" className="form-label mt-5">
                       Enter Your NIM
                     </label>
-                    <input className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="200407002" style={{ width: "10rem" }} />
+                    <input
+                      className="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="200407002"
+                      style={{ width: "10rem" }}
+                      value={id}
+                      onChange={(e) => {
+                        setId(e.target.value);
+                      }}
+                    />
                     <div id="emailHelp" className="form-text text-center">
-                      Before you click Checkout please pray for a minute goodluck !!
+                      Before you click Checkout please pray for a minute goodluck!!
                     </div>
                   </div>
-                  <Link to={`/hasil/`}>
+
+                  <Link to={`/hasil/${id}`}>
                     <button type="submit" className="btn btn-info ">
                       Checkout!!
                     </button>
