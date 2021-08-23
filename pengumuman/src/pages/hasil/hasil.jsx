@@ -1,6 +1,21 @@
 import "./hasil.css";
 import logo from "../../img/logo.jpeg";
+import { useEffect, useState, useParams } from "react";
+import axios from "axios";
 function Hasil() {
+  const { id } = useParams();
+  const [lulus, setLulus] = useState({});
+  const getHasil = async () => {
+    await axios
+      .get(`https://3006/data/${id}`)
+      .then((result) => setLulus(result.data))
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    getHasil(id);
+  }, [id]);
+  console.log(lulus);
   return (
     <>
       <main className=" container-fluid">

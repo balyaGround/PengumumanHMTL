@@ -87,6 +87,16 @@ main {
     margin-left: 10rem;
   }
 }
+@media (min-width: 321px) {
+  button {
+    margin-left: 3rem;
+  }
+}
+@media (min-width: 376px) {
+  button {
+    margin-left: 4rem;
+  }
+}
 @media (min-width: 769px) {
   button {
     margin-left: 15rem;

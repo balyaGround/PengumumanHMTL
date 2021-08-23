@@ -10,7 +10,7 @@ function Router() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/hasil">
+        <Route exact path="/hasil/:id">
           <Hasil />
         </Route>
         <Route path="*">
